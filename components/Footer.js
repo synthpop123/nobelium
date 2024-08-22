@@ -1,5 +1,4 @@
 import { useConfig } from '@/lib/config'
-import Vercel from '@/components/Vercel'
 const Footer = ({ fullWidth }) => {
   const BLOG = useConfig()
 
@@ -16,9 +15,13 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6">
         <div className="flex align-baseline justify-between flex-wrap">
           <p>
-            © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
+            © {from === y || !from ? y : `${from} - ${y}`} {BLOG.author}
           </p>
-          <Vercel />
+          <img
+            src="https://img.lkwplus.com/by-nc-sa.svg"
+            alt="Creative Commons License"
+            className="h-7"
+          />
         </div>
       </div>
     </div>
